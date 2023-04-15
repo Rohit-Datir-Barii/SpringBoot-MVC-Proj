@@ -30,7 +30,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee getEmployeeByNo(int no) {
 		Optional<Employee> optional = empRepo.findById(no);
-		if (optional.isEmpty())
+		if (!optional.isPresent())
 			throw new EmployeeNotFoundException(no + " emp not found");
 		return optional.get();
 	}
