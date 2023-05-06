@@ -43,6 +43,11 @@ public class Employee {
 	public void setSal(Float sal) {
 		this.sal = sal;
 	}
+	
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Employee(Integer empno, String ename, String job, Float sal) {
 		super();
 		this.empno = empno;
